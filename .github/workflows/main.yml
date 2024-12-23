@@ -53,7 +53,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/discovery-service:latest
 
-      - name: Build & Push user-service
+      - name: Build & Push projet-service
         uses: docker/build-push-action@v4
         with:
           context: .
@@ -61,7 +61,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/projet-service:latest
 
-      - name: Build & Push role-service
+      - name: Build & Push notification-service
         uses: docker/build-push-action@v4
         with:
           context: .
